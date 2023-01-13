@@ -38,13 +38,17 @@
     <script>
         function linkTrack() {
             let linkName = document.querySelector("#navLink1").textContent;
+            let linkURL = document.querySelector("#navLink1").href;
             window.adobeDataLayer.push({
                 "event": "link track",
                 "link": {
-                    "name": 
+                    "name": linkName,
+                    "location": null,
+                    "type": "internal",
+                    "destinationURL": linkURL
                 }
+            });
         }
-    }
     </script>
 </head>
 <body>
