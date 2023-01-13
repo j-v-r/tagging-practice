@@ -35,9 +35,24 @@
             }
     });
     </script>
+    <script>
+        function linkTrack() {
+            let linkName = document.querySelector("#navLink1").textContent;
+            let linkURL = document.querySelector("#navLink1").href;
+            window.adobeDataLayer.push({
+                "event": "link track",
+                "link": {
+                    "name": linkName,
+                    "location": null,
+                    "type": "internal",
+                    "destinationURL": linkURL
+                }
+            });
+        }
+    </script>
 </head>
 <body>
     <h1>Product Page</h1>
-    <a href="index.html">Homepage</a>
+    <a onclick="linkTrack()" href="index.html" id="navLink1">Homepage</a>
 </body>
 </html>
