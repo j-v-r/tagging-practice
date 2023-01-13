@@ -38,8 +38,8 @@
     <script>
         function linkTrack(element) {
             console.log(element);
-            let linkName = document.querySelector("#navLink1").textContent;
-            let linkURL = document.querySelector("#navLink1").href;
+            let linkName = element.textContent;
+            let linkURL = element.href;
             window.adobeDataLayer.push({
                 "event": "link track",
                 "link": {
