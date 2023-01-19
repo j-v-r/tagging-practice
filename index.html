@@ -37,7 +37,6 @@
     </script>
     <script>
         function linkTrack(element) {
-            console.log(element);
             let linkName = element.textContent;
             let linkURL = element.href;
             window.adobeDataLayer.push({
@@ -55,5 +54,6 @@
 <body>
     <h1>Tagging Practice Homepage</h1>
     <a onclick="linkTrack(this)" href="product-page.html" id="navLink1">Product Page</a>
+    <div id="specialElement" >Special element for tracking</div>
 </body>
 </html>
